@@ -1,0 +1,4 @@
+#GMS_HDF5_01
+10 740 AUX IFACE AUX QFACT AUX CELLGRP
+        10         0         0
+GMS_HDF5_01 "Estcp.h5" "Well" 1

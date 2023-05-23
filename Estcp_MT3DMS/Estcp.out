@@ -1,0 +1,373 @@
+
+                              +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              +                                                                     +
+                              +                               MT3DMS                                +
+                              +             A Modular 3D Multi-Species Transport Model              +
+                              +    For Simulation of Advection, Dispersion and Chemical Reactions   +
+                              +                of Contaminants in Groundwater Systems               +
+                              +                                                                     +
+                              +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  ----- 
+ | M T | GMS MT3D Simulation                                                             
+ | 3 D | 22 July 2018                                                                    
+  ----- 
+ THE TRANSPORT MODEL CONSISTS OF     1 LAYER(S)   20 ROW(S)   25 COLUMN(S)
+ NUMBER OF STRESS PERIOD(S) FOR TRANSPORT SIMULATION =    1
+ NUMBER OF ALL COMPONENTS INCLUDED IN SIMULATION =    1
+ NUMBER OF MOBILE COMPONENTS INCLUDED IN SIMULATION =    1
+ UNIT FOR TIME IS    d;  UNIT FOR LENGTH IS   ft;  UNIT FOR MASS IS   mg
+ OPTIONAL PACKAGES INCLUDED IN CURRENT SIMULATION:
+  o ADV   ON UNIT  2
+  o DSP   ON UNIT  3
+  o SSM   ON UNIT  4
+  o GCG   ON UNIT  9
+
+ BTN5 -- BASIC TRANSPORT PACKAGE, VERSION 5, FEBRUARY 2010, INPUT READ FROM UNIT  1
+       8090 ELEMENTS OF THE  X ARRAY USED BY THE BTN PACKAGE
+        501 ELEMENTS OF THE IX ARRAY USED BY THE BTN PACKAGE
+
+ FMI5 -- FLOW MODEL INTERFACE PACKAGE, VERSION 5, FEBRUARY 2010, INPUT READ FROM UNIT 10
+ FLOW MODEL IS TRANSIENT
+ FLOW MODEL CONTAINS CONSTANT-HEAD CELLS
+
+ ADV5 -- ADVECTION PACKAGE, VERSION 5, FEBRUARY 2010, INPUT READ FROM UNIT  2
+ ADVECTION IS SOLVED WITH THE ULTIMATE SCHEME
+ COURANT NUMBER ALLOWED IN SOLVING THE ADVECTION TERM = 0.750    
+          0 ELEMENTS OF THE  X ARRAY USED BY THE ADV PACKAGE
+          0 ELEMENTS OF THE IX ARRAY USED BY THE ADV PACKAGE
+
+ DSP5 -- DISPERSION PACKAGE, VERSION 5, FEBRUARY 2010, INPUT READ FROM UNIT  3
+       5502 ELEMENTS OF THE  X ARRAY USED BY THE DSP PACKAGE
+          0 ELEMENTS OF THE IX ARRAY USED BY THE DSP PACKAGE
+
+ SSM5 -- SINK & SOURCE MIXING PACKAGE, VERSION 5, FEBRUARY 2010, INPUT READ FROM UNIT  4
+ HEADER LINE OF THE SSM PACKAGE INPUT FILE:
+  F F F F F F                                                                                                                                                                                            
+ MAJOR STRESS COMPONENTS PRESENT IN THE FLOW MODEL:
+  o WELL [WEL]
+ MAXIMUM NUMBER OF POINT SINKS/SOURCES =      50
+        650 ELEMENTS OF THE  X ARRAY USED BY THE SSM PACKAGE
+          0 ELEMENTS OF THE IX ARRAY BY THE SSM PACKAGE
+
+ GCG5 -- GENERALIZED CONJUGATE GRADIENT SOLVER PACKAGE, VERSION 5, FEBRUARY 2010 INPUT READ FROM UNIT  9
+ MAXIMUM OF   10 OUTER ITERATIONS
+        AND   50 INNER ITERATIONS ALLOWED FOR CLOSURE
+ THE PRECONDITIONING TYPE SELECTED IS MODIFIED INCOMPLETE CHOLESKY (MIC).
+ DISPERSION CROSS TERMS LUMPED INTO RIGHT-HAND-SIDE
+      11500 ELEMENTS OF THE  X ARRAY USED BY THE GCG PACKAGE
+       1500 ELEMENTS OF THE IX ARRAY USED BY THE GCG PACKAGE
+
+ ..........................................
+ ELEMENTS OF THE  X ARRAY USED =     25743
+ ELEMENTS OF THE IX ARRAY USED =      2002
+ ..........................................
+
+ LAYER NUMBER  AQUIFER TYPE
+ ------------  ------------
+       1            0
+                                       WIDTH ALONG ROWS (DELR)  =   500.0000    
+                                       WIDTH ALONG COLS (DELC)  =   500.0000    
+                                       TOP ELEV. OF 1ST LAYER   =   100.0000    
+                                       CELL THICKNESS (DZ)      =   100.0000     FOR LAYER  1
+                                       POROSITY                 =  0.1500000     FOR LAYER  1
+                                       CONCN. BOUNDARY ARRAY    =              1 FOR LAYER  1
+
+                     INITIAL CONC.: COMP.  01 FOR LAYER  1 READ ON UNIT  1 USING FORMAT: "           (10G15.6)"
+                     ------------------------------------------------------------------------------------------
+
+ VALUE INDICATING INACTIVE CONCENTRATION CELLS =   -999.0000    
+ MINIMUM SATURATED THICKNESS [THKMIN] ALLOWED =  0.0000 OF TOTAL CELL THICKNESS
+
+
+ OUTPUT CONTROL OPTIONS
+ ----------------------
+
+ DO NOT PRINT CELL CONCENTRATION
+ DO NOT PRINT PARTICLE NUMBER IN EACH CELL
+ DO NOT PRINT RETARDATION FACTOR
+ DO NOT PRINT DISPERSION COEFFICIENT
+ SAVE DISSOLVED PHASE CONCENTRATIONS IN UNFORMATTED FILES [MT3Dnnn.UCN]
+  FOR EACH SPECIES ON UNITS 201 AND ABOVE
+
+ NUMBER OF TIMES AT WHICH SIMULATION RESULTS ARE SAVED =    0
+
+ NUMBER OF OBSERVATION POINTS =    0
+
+ SAVE ONE-LINE SUMMARY OF MASS BUDGETS IN FILES [MT3Dnnn.MAS]
+  FOR EACH SPECIES ON UNITS 601 AND ABOVE, EVERY  1 TRANSPORT STEPS
+
+ MAXIMUM LENGTH ALONG THE X (J) AXIS =   12500.00    
+ MAXIMUM LENGTH ALONG THE Y (I) AXIS =   10000.00    
+ MAXIMUM LENGTH ALONG THE Z (K) AXIS =   100.0000    
+
+
+ ADVECTION SOLUTION OPTIONS
+ --------------------------
+
+ ADVECTION IS SOLVED WITH THE ULTIMATE SCHEME
+ COURANT NUMBER ALLOWED IN SOLVING THE ADVECTION TERM = 0.750    
+
+
+ DISPERSION INPUT PARAMETERS
+ ---------------------------
+
+                                       LONG. DISPERSIVITY (AL)  =   150.0000     FOR LAYER  1
+                                       H. TRANS./LONG. DISP.    =  0.2000000    
+                                       V. TRANS./LONG. DISP.    =   0.000000    
+                                       DIFFUSION COEFFICIENT    =   0.000000    
+
+
+
+                                               SOLUTION BY THE GENERALIZED CONJUGATE GRADIENT METHOD
+                                               -----------------------------------------------------
+                                     MAXIMUM OUTER ITERATIONS ALLOWED FOR CLOSURE =       10
+                                     MAXIMUM INNER ITERATIONS ALLOWED FOR CLOSURE =       50
+                                                    PRECONDITIONING TYPE SELECTED =    3
+                                                           ACCELERATION PARAMETER =     1.0000    
+                                       CONCENTRATION CHANGE CRITERION FOR CLOSURE =    0.10000E-05
+                                       GCG CONCENTRATION CHANGE PRINTOUT INTERVAL =        1
+
+
+                                   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                                       STRESS PERIOD NO.  001
+                                   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+ LENGTH OF CURRENT STRESS PERIOD =   1825.000    
+ NUMBER OF TIME STEPS FOR CURRENT STRESS PERIOD =    1
+ TIME STEP MULTIPLIER USED IN FLOW SOLUTION =   1.000000    
+
+ ***Type of Transport Simulation is TRANSIENT
+
+ USER-SPECIFIED TRANSPORT STEPSIZE =   0.000000       d
+ MAXIMUM NUMBER OF TRANSPORT STEPS ALLOWED  IN ONE FLOW TIME STEP =      1000
+ MULTIPLIER FOR SUCCESSIVE TRANSPORT STEPS  [USED IN IMPLICIT SCHEMES] =     1.000
+ MAXIMUM TRANSPORT STEP SIZE  [USED IN IMPLICIT SCHEMES] =   0.000000       d
+
+ NO. OF POINT SINKS/SOURCES OF SPECIFIED CONCONCENTRATIONS =    0 IN STRESS PERIOD  1
+
+
+                                          ================================================
+                                                         TIME STEP NO.  001
+                                          ================================================
+
+ FROM TIME =   0.0000     TO    1825.0    
+
+
+                    "THKSAT          " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  1 READ UNFORMATTED ON UNIT 10
+                    --------------------------------------------------------------------------------------------
+
+                    "QXX             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  1 READ UNFORMATTED ON UNIT 10
+                    --------------------------------------------------------------------------------------------
+
+                    "QYY             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  1 READ UNFORMATTED ON UNIT 10
+                    --------------------------------------------------------------------------------------------
+
+                    "STO             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  1 READ UNFORMATTED ON UNIT 10
+                    --------------------------------------------------------------------------------------------
+
+ MAXIMUM STEPSIZE DURING WHICH ANY PARTICLE CANNOT MOVE MORE THAN ONE CELL
+ =  225.7    (WHEN MIN. R.F.=1)  AT K=   1, I=   9, J=   8
+
+ MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE ADVECTION TERM
+ (FOR PURE FINITE-DIFFERENCE OPTION, MIXELM=0) 
+ =  135.0    (WHEN MIN. R.F.=1)  AT K=   1, I=   9, J=   9
+
+                    "CNH             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  1 READ UNFORMATTED ON UNIT 10
+                    --------------------------------------------------------------------------------------------
+
+                    "WEL             " FLOW TERMS FOR TIME STEP  1, STRESS PERIOD  1 READ UNFORMATTED ON UNIT 10
+                    --------------------------------------------------------------------------------------------
+
+
+ TOTAL NUMBER OF POINT SOURCES/SINKS PRESENT IN THE FLOW MODEL =    50
+
+ MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE SINK & SOURCE TERM
+ =  343.2    (WHEN MIN. R.F.=1)  AT K=   1, I=   9, J=   1
+
+ MAXIMUM STEPSIZE WHICH MEETS STABILITY CRITERION OF THE DISPERSION TERM
+ =  279.3    (WHEN MIN. R.F.=1)  AT K=   1, I=   9, J=   8
+
+
+     5 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   1 IN FLOW TIME STEP   1 STRESS PERIOD   1
+    12 TOTAL ITERATIONS
+  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
+  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
+ ------------------------------------------------------------------------------------------------------------------------------------
+   0.4745     (  1,  9,  9)  0.1244E-02 (  1, 10,  8)  0.2325E-05 (  1,  9,  9)  0.2095E-08 (  1, 12,  6)  0.5942E-02 (  1, 10,  8)
+   0.8821E-05 (  1,  9,  7)  0.1490E-07 (  1,  8, 10)  0.1018E-03 (  1, 11,  9)  0.1639E-06 (  1, 10, 10)  0.1818E-05 (  1, 10, 10)
+   0.3725E-08 (  1, 11,  9)   0.000     (  1,  1,  1)
+     5 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   2 IN FLOW TIME STEP   1 STRESS PERIOD   1
+    12 TOTAL ITERATIONS
+  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
+  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
+ ------------------------------------------------------------------------------------------------------------------------------------
+   0.4732     (  1,  9,  9)  0.1240E-02 (  1, 10,  8)  0.2146E-05 (  1,  9,  9)  0.2095E-08 (  1, 12,  6)  0.5949E-02 (  1, 10,  8)
+   0.8821E-05 (  1,  9,  7)  0.1490E-07 (  1,  8, 10)  0.1017E-03 (  1, 11,  9)  0.1639E-06 (  1, 10, 10)  0.1833E-05 (  1, 10, 10)
+   0.3725E-08 (  1, 11,  9)   0.000     (  1,  1,  1)
+     5 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   3 IN FLOW TIME STEP   1 STRESS PERIOD   1
+    12 TOTAL ITERATIONS
+  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
+  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
+ ------------------------------------------------------------------------------------------------------------------------------------
+   0.4732     (  1,  9,  9)  0.1239E-02 (  1, 10,  8)  0.2265E-05 (  1,  9,  9)  0.2095E-08 (  1, 12,  6)  0.6164E-02 (  1, 10,  8)
+   0.9060E-05 (  1,  9,  7)  0.1490E-07 (  1,  8, 10)  0.1058E-03 (  1, 11,  9)  0.1639E-06 (  1, 10, 10)  0.1922E-05 (  1, 10, 10)
+   0.3725E-08 (  1,  7,  9)   0.000     (  1,  1,  1)
+     5 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   4 IN FLOW TIME STEP   1 STRESS PERIOD   1
+    12 TOTAL ITERATIONS
+  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
+  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
+ ------------------------------------------------------------------------------------------------------------------------------------
+   0.4748     (  1,  9,  9)  0.1242E-02 (  1, 10,  8)  0.2205E-05 (  1,  9,  9)  0.2095E-08 (  1, 12,  6)  0.6519E-02 (  1, 10,  8)
+   0.9596E-05 (  1,  9,  7)  0.1490E-07 (  1,  8, 10)  0.1125E-03 (  1, 11,  9)  0.1788E-06 (  1, 10, 10)  0.2012E-05 (  1, 10, 10)
+   0.3725E-08 (  1,  7,  9)   0.000     (  1,  1,  1)
+     5 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   5 IN FLOW TIME STEP   1 STRESS PERIOD   1
+    12 TOTAL ITERATIONS
+  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
+  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
+ ------------------------------------------------------------------------------------------------------------------------------------
+   0.4765     (  1,  9,  9)  0.1245E-02 (  1, 10,  8)  0.2384E-05 (  1,  9,  9)  0.2095E-08 (  1, 12,  6)  0.6822E-02 (  1, 10,  8)
+   0.1001E-04 (  1,  9,  7)  0.1490E-07 (  1,  8, 10)  0.1184E-03 (  1, 11,  9)  0.1937E-06 (  1, 10, 10)  0.2176E-05 (  1, 10, 10)
+   0.3725E-08 (  1,  7,  9)   0.000     (  1,  1,  1)
+     5 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   6 IN FLOW TIME STEP   1 STRESS PERIOD   1
+    12 TOTAL ITERATIONS
+  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
+  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
+ ------------------------------------------------------------------------------------------------------------------------------------
+   0.4775     (  1,  9,  9)  0.1247E-02 (  1, 10,  8)  0.2265E-05 (  1,  9,  9)  0.2095E-08 (  1, 12,  6)  0.7068E-02 (  1, 10,  8)
+   0.1031E-04 (  1,  9,  7)  0.1490E-07 (  1,  8, 10)  0.1225E-03 (  1, 11,  9)  0.1937E-06 (  1, 10, 10)  0.2250E-05 (  1, 10, 10)
+   0.3725E-08 (  1,  7,  9)   0.000     (  1,  1,  1)
+     5 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   7 IN FLOW TIME STEP   1 STRESS PERIOD   1
+    12 TOTAL ITERATIONS
+  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
+  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
+ ------------------------------------------------------------------------------------------------------------------------------------
+   0.4786     (  1,  9,  9)  0.1250E-02 (  1, 10,  8)  0.2384E-05 (  1,  9,  9)  0.2095E-08 (  1, 12,  6)  0.7359E-02 (  1, 10,  8)
+   0.1073E-04 (  1,  9,  7)  0.2980E-07 (  1,  8, 10)  0.1268E-03 (  1, 11,  9)  0.1937E-06 (  1, 10, 10)  0.2354E-05 (  1, 10, 10)
+   0.3725E-08 (  1,  7,  9)   0.000     (  1,  1,  1)
+     5 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   8 IN FLOW TIME STEP   1 STRESS PERIOD   1
+    12 TOTAL ITERATIONS
+  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
+  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
+ ------------------------------------------------------------------------------------------------------------------------------------
+   0.4800     (  1,  9,  9)  0.1253E-02 (  1, 10,  8)  0.2325E-05 (  1,  9,  9)  0.2095E-08 (  1, 12,  6)  0.7700E-02 (  1, 10,  8)
+   0.1121E-04 (  1,  9,  7)  0.1490E-07 (  1,  8, 10)  0.1315E-03 (  1, 11,  9)  0.2086E-06 (  1, 10, 10)  0.2369E-05 (  1, 10, 10)
+   0.3725E-08 (  1,  7,  9)   0.000     (  1,  1,  1)
+     5 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP   9 IN FLOW TIME STEP   1 STRESS PERIOD   1
+    12 TOTAL ITERATIONS
+  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
+  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
+ ------------------------------------------------------------------------------------------------------------------------------------
+   0.4813     (  1,  9,  9)  0.1256E-02 (  1, 10,  8)  0.2384E-05 (  1,  9,  9)  0.3725E-08 (  1,  8, 12)  0.8047E-02 (  1, 10,  8)
+   0.1168E-04 (  1,  9,  7)  0.2980E-07 (  1,  8, 10)  0.1354E-03 (  1, 11,  9)  0.2086E-06 (  1, 10, 10)  0.2414E-05 (  1, 10, 10)
+   0.5588E-08 (  1, 11,  9)   0.000     (  1,  1,  1)
+     5 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  10 IN FLOW TIME STEP   1 STRESS PERIOD   1
+    12 TOTAL ITERATIONS
+  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
+  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
+ ------------------------------------------------------------------------------------------------------------------------------------
+   0.4824     (  1,  9,  9)  0.1258E-02 (  1, 10,  8)  0.2265E-05 (  1,  9,  9)  0.3725E-08 (  1,  8, 12)  0.8389E-02 (  1, 10,  8)
+   0.1216E-04 (  1,  9,  7)  0.2980E-07 (  1,  8, 10)  0.1383E-03 (  1, 11,  9)  0.2086E-06 (  1, 10, 10)  0.2459E-05 (  1, 10, 10)
+   0.5588E-08 (  1, 11,  9)   0.000     (  1,  1,  1)
+     5 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  11 IN FLOW TIME STEP   1 STRESS PERIOD   1
+    12 TOTAL ITERATIONS
+  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
+  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
+ ------------------------------------------------------------------------------------------------------------------------------------
+   0.4833     (  1,  9,  9)  0.1260E-02 (  1, 10,  8)  0.2146E-05 (  1,  9,  9)  0.3725E-08 (  1,  8, 12)  0.8584E-02 (  1, 10,  8)
+   0.1246E-04 (  1,  9,  7)  0.2980E-07 (  1,  8, 10)  0.1386E-03 (  1, 11,  9)  0.2086E-06 (  1,  8,  8)  0.2354E-05 (  1, 10, 10)
+   0.3725E-08 (  1,  7,  9)   0.000     (  1,  1,  1)
+     5 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  12 IN FLOW TIME STEP   1 STRESS PERIOD   1
+    12 TOTAL ITERATIONS
+  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
+  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
+ ------------------------------------------------------------------------------------------------------------------------------------
+   0.4844     (  1,  9,  9)  0.1263E-02 (  1, 10,  8)  0.2086E-05 (  1,  9,  9)  0.2095E-08 (  1, 12,  6)  0.8644E-02 (  1, 10,  8)
+   0.1258E-04 (  1,  9,  7)  0.2980E-07 (  1,  8, 10)  0.1353E-03 (  1, 11,  9)  0.2086E-06 (  1, 10,  8)  0.2235E-05 (  1, 10, 10)
+   0.3725E-08 (  1,  7,  9)   0.000     (  1,  1,  1)
+     5 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  13 IN FLOW TIME STEP   1 STRESS PERIOD   1
+    12 TOTAL ITERATIONS
+  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
+  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
+ ------------------------------------------------------------------------------------------------------------------------------------
+   0.4863     (  1,  9,  9)  0.1267E-02 (  1, 10,  8)  0.2086E-05 (  1,  9,  9)  0.2095E-08 (  1, 12,  6)  0.8712E-02 (  1, 10,  8)
+   0.1270E-04 (  1,  9,  7)  0.2980E-07 (  1,  8, 10)  0.1319E-03 (  1, 11,  9)  0.2086E-06 (  1, 10,  8)  0.2116E-05 (  1, 10, 10)
+   0.3725E-08 (  1,  7,  9)   0.000     (  1,  1,  1)
+     5 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  14 IN FLOW TIME STEP   1 STRESS PERIOD   1
+    12 TOTAL ITERATIONS
+  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
+  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
+ ------------------------------------------------------------------------------------------------------------------------------------
+   0.4876     (  1,  9,  9)  0.1270E-02 (  1, 10,  8)  0.1937E-05 (  1,  9, 11)  0.2095E-08 (  1, 12,  6)  0.8524E-02 (  1, 10,  8)
+   0.1246E-04 (  1,  9,  7)  0.2980E-07 (  1,  8, 10)  0.1240E-03 (  1, 11,  9)  0.1788E-06 (  1,  8,  8)  0.1967E-05 (  1, 10,  8)
+   0.3725E-08 (  1, 11,  7)   0.000     (  1,  1,  1)
+     5 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  15 IN FLOW TIME STEP   1 STRESS PERIOD   1
+    12 TOTAL ITERATIONS
+  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
+  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
+ ------------------------------------------------------------------------------------------------------------------------------------
+   0.4884     (  1,  9,  9)  0.1272E-02 (  1, 10,  8)  0.2235E-05 (  1,  9, 11)  0.2095E-08 (  1, 12,  6)  0.8204E-02 (  1, 10,  8)
+   0.1204E-04 (  1,  9,  7)  0.2980E-07 (  1,  8, 10)  0.1121E-03 (  1, 11,  9)  0.1788E-06 (  1, 10,  8)  0.1758E-05 (  1, 10,  8)
+   0.3725E-08 (  1, 11,  7)   0.000     (  1,  1,  1)
+     5 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  16 IN FLOW TIME STEP   1 STRESS PERIOD   1
+    12 TOTAL ITERATIONS
+  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
+  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
+ ------------------------------------------------------------------------------------------------------------------------------------
+   0.4890     (  1,  9,  9)  0.1273E-02 (  1, 10,  8)  0.2384E-05 (  1,  9, 11)  0.2212E-08 (  1, 12,  6)  0.7840E-02 (  1, 10,  8)
+   0.1153E-04 (  1,  9,  7)  0.2980E-07 (  1,  8, 10)  0.1002E-03 (  1, 11,  9)  0.1788E-06 (  1, 10,  8)  0.1580E-05 (  1, 10,  8)
+   0.3725E-08 (  1, 11,  7)   0.000     (  1,  1,  1)
+     5 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  17 IN FLOW TIME STEP   1 STRESS PERIOD   1
+    12 TOTAL ITERATIONS
+  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
+  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
+ ------------------------------------------------------------------------------------------------------------------------------------
+   0.4894     (  1,  9,  9)  0.1275E-02 (  1, 10,  8)  0.2503E-05 (  1,  9, 11)  0.2212E-08 (  1, 12,  6)  0.7469E-02 (  1, 10,  8)
+   0.1103E-04 (  1,  9,  7)  0.2980E-07 (  1,  8, 10)  0.8837E-04 (  1, 11,  9)  0.1788E-06 (  1, 10,  8)  0.1460E-05 (  1, 10,  8)
+   0.3725E-08 (  1, 11,  7)   0.000     (  1,  1,  1)
+     5 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  18 IN FLOW TIME STEP   1 STRESS PERIOD   1
+    12 TOTAL ITERATIONS
+  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
+  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
+ ------------------------------------------------------------------------------------------------------------------------------------
+   0.4608     (  1,  9,  9)  0.1200E-02 (  1, 10,  8)  0.2384E-05 (  1,  9, 11)  0.2095E-08 (  1, 12,  6)  0.7104E-02 (  1, 10,  8)
+   0.1055E-04 (  1,  9,  7)  0.2980E-07 (  1,  8, 10)  0.7695E-04 (  1, 11,  9)  0.1490E-06 (  1, 10,  8)  0.1252E-05 (  1, 10,  8)
+   0.3725E-08 (  1, 11,  7)   0.000     (  1,  1,  1)
+     3 CALLS TO GCG PACKAGE FOR TRANSPORT TIME STEP  19 IN FLOW TIME STEP   1 STRESS PERIOD   1
+     5 TOTAL ITERATIONS
+  MAXIMUM CONCENTRATION CHANGES FOR EACH ITERATION:
+  MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL MAX. CHANGE LAYER,ROW,COL
+ ------------------------------------------------------------------------------------------------------------------------------------
+   0.1386E-01 (  1,  9,  9)  0.2980E-07 (  1,  8, 10)  0.2861E-05 (  1, 10,  8)   0.000     (  1,  1,  1)   0.000     (  1,  1,  1)
+
+
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>FOR COMPONENT NO. 01<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+                                            -------------------------------------------
+                                                      TRANSPORT STEP NO.   19
+                                            -------------------------------------------
+
+ TOTAL ELAPSED TIME SINCE BEGINNING OF SIMULATION =   1825.000       d
+ .....................................................................
+
+                     CUMMULATIVE MASS BUDGETS AT END OF TRANSPORT STEP   19, TIME STEP    1, STRESS PERIOD    1
+                     ------------------------------------------------------------------------------------------
+
+                                                             IN                           OUT
+                                                      ----------------             ----------------
+                               CONSTANT CONCENTRATION:    0.000000                    0.000000    
+                                        CONSTANT HEAD:    0.000000                   -846.2968    
+                                                WELLS:    0.000000                  -0.2118210E+10
+                                MASS STORAGE (SOLUTE):   0.2210127E+10              -0.9194628E+08
+                            ---------------------------------------------------------------------------
+                                              [TOTAL]:   0.2210157E+10   mg         -0.2210157E+10   mg
+
+                                                          NET (IN - OUT):   -256.0000    
+                                                   DISCREPANCY (PERCENT):  -0.1158289E-04
+  ----- 
+ | M T |
+ | 3 D | END OF MODEL OUTPUT
+  ----- 
