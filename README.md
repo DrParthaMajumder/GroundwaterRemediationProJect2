@@ -1,3 +1,2 @@
-# GroundwaterRemediationProblem2
-**I here developed groundwater remediation model for a hypothetical proble.
-The details can be found in ProblemDetails.pptx file.**
+**I here developed a simulation-Optimization mmodel for groundwater remediation.
+The details of the aquifer domain can be found in ProblemDetails.pptx file.**
