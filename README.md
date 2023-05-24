@@ -1,8 +1,5 @@
-# A simulation-Optimization model for groundwater remediation:
-# A short note on groundwater remediation
-
-
-# The details of the aquifer domain can be found in ProblemDetails.pptx file.
+# A simulation-Optimization model for groundwater remediation for ESTCP problem:
+ The details of the aquifer domain can be found in ProblemDetails.pptx file.
 # Developer: Dr. Partha Majumder (Email: parthamajpk@gmail.com)
 
 # A short note on pump and treat based groundwater remediation using simulation-optimization approach
